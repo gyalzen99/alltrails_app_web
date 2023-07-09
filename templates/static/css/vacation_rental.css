@@ -1,0 +1,102 @@
+.vacation {
+    margin-top: 4rem;
+}
+
+.vacationContainer {
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+.vacationImage {
+    width: 100%;
+}
+
+.showPriceBtn {
+    color: white;
+    border-radius: 50px;
+    background-color: #689368;
+    border: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+.vacationInfo {
+    color: white;
+    background-color: #22577A;
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.infoTitle {
+    color: #B4D330;
+    font-size: 1.2rem;
+}
+
+@media (width > 48rem) and (width < 75rem) {
+    .vacationContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 10rem;
+        margin-right: 10rem;
+    }
+
+    .vacationImage {
+        width: auto;
+        margin-right: 1rem;
+    }
+
+    .vacationInfo {
+        width: 70%;
+        min-height: 240px;
+        height: 200px;
+        margin-bottom: 0rem;
+    }
+
+    .info p {
+        font-size: 0.8rem;
+    }
+
+    .infoTitle {
+        color: #B4D330;
+        font-size: 2rem;
+    }
+}
+
+@media (width >=75rem) {
+    .vacationContainer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-left: 20rem;
+        margin-right: 20rem;
+    }
+
+    .vacationImage {
+        width: auto;
+        margin-right: 1rem;
+    }
+
+    .vacationInfo {
+        width: 70%;
+        min-height: 240px;
+        height: 200px;
+        margin-bottom: 0rem;
+    }
+
+    .info p {
+        font-size: 0.8rem;
+    }
+
+    .infoTitle {
+        color: #B4D330;
+        font-size: 2rem;
+    }
+}

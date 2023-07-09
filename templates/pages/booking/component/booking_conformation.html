@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/booking_conformation.css">
+    <title>{{user.username|capfirst}} Booking conformation</title>
+</head>
+
+<body>
+    <div class="bookingConformationContainer">
+        <div class="bookingDetail">
+            <p>
+                Account name : {{booking_detail.user.username}}
+            </p>
+            <p>
+                Email: {{booking_detail.user.email}}
+            </p>
+            <p>
+                Booking Type: {{booking_detail.booking_type}}
+            </p>
+            <p>
+                Number of people: {{booking_detail.number_of_people}}
+            </p>
+            <p>
+                Phone number: {{booking_detail.phone_number}}
+            </p>
+        </div>
+
+        <div class="conformBookingBtn">
+            <form action="{% url 'booking_conformation' %}?id={{id}}" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn">Cancel</button>
+            </form>
+            <div class="space"></div>
+            <a href="{% url 'home' %}" class="link">
+                <div class="acceptBtn btn">
+                    Conform
+                </div>
+            </a>
+        </div>
+    </div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/hotel.css">
+    <title>{{title}}</title>
+</head>
+
+<body>
+    {% include 'nav_bar.html' %}
+    <div class="hotelContainer">
+        {% for detail in hotel_details %}
+        <div class="hotelInfoContainer">
+            <img src="/media/{{detail.hotel_image}}" alt="{{detail.hotel_name}}" class="hotelImage">
+            <div class="hotelInfo">
+                <div class="hotelInfoLeft">
+                    <p class="hotelName">
+                        {{detail.hotel_name}}
+                    </p>
+                    <a href="{% url 'hotel_detail' %}?hotel_detail_id={{detail.id}}">
+                        <button class="viewDetails">
+                            View Details
+                        </button>
+                    </a>
+                </div>
+                <div class="hotelInfoRight">
+                    <p>
+                        {{detail.hotel_info}}
+                    </p>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    {% include 'footer.html' %}
+</body>
+
+</html>

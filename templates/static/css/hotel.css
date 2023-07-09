@@ -1,0 +1,213 @@
+.hotelContainer {
+    margin-top: 4rem;
+}
+
+.registration {
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.upperRegistration {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.upperRegistration {
+    margin-bottom: 1.5rem;
+}
+
+.checkInCalendar {
+    border: none;
+}
+
+.checkIn h4 {
+    color: #22577A;
+    margin: 0px;
+    padding-bottom: 0.4rem;
+}
+
+.checkOutCalendar {
+    border: none;
+}
+
+
+.checkOut h4 {
+    color: #22577A;
+    margin: 0px;
+    padding-bottom: 0.4rem;
+}
+
+.guestDropDownLabel {
+    border: none;
+}
+
+.guestDropDown {
+    border: none;
+}
+
+.guest {
+    text-align: center;
+}
+
+.guest h4 {
+    color: #22577A;
+    margin: 0px;
+    padding-bottom: 0.4rem;
+    text-align: center;
+}
+
+.hotelInfoContainer {
+    margin-bottom: 1rem;
+}
+
+.hotelImage {
+    width: 100%;
+}
+
+.hotelInfo {
+    color: white;
+    background-color: #22577A;
+    padding: 1rem;
+}
+
+.hotelName p {
+    color: #B4D330;
+}
+
+.viewDetails {
+    color: white;
+    background-color: #689368;
+    border: none;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.hotelName {
+    color: #B4D330;
+}
+
+.hotelInfoRight {
+    text-align: justify;
+}
+
+@media (width > 48rem) and (width < 75rem) {
+    .hotelContainer {
+        height: 100%;
+    }
+
+    .registration {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .upperRegistration {
+        width: 40%;
+        margin-bottom: 0rem;
+    }
+
+    .guest h4 {
+        text-align: start;
+    }
+
+    .hotelImage {
+        width: 20%;
+        margin-right: 1rem;
+    }
+
+    .hotelInfoContainer {
+        display: flex;
+        margin-right: 6rem;
+        margin-left: 6rem;
+    }
+
+    .hotelInfo {
+        display: flex;
+        align-items: center;
+    }
+
+    .hotelName {
+        font-size: 0.8rem;
+    }
+
+    .hotelLocation {
+        font-size: 0.8rem;
+    }
+
+    .viewDetails {
+        font-size: 0.6rem;
+    }
+
+    .hotelInfoRight {
+        font-size: 0.8rem;
+    }
+
+    .hotelInfoRight p {
+        display: flex;
+        align-items: center;
+        margin-left: 2rem;
+
+    }
+}
+
+@media(width >=75rem) {
+    .hotelContainer {
+        height: 100%;
+    }
+
+    .registration {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .upperRegistration {
+        width: 40%;
+        margin-bottom: 0rem;
+    }
+
+    .guest h4 {
+        text-align: start;
+    }
+
+    .hotelImage {
+        width: 20%;
+        margin-right: 1rem;
+    }
+
+    .hotelInfoContainer {
+        display: flex;
+        margin-right: 20rem;
+        margin-left: 20rem;
+    }
+
+    .hotelInfo {
+        display: flex;
+        align-items: center;
+    }
+
+    .hotelName {
+        font-size: 0.8rem;
+    }
+
+    .hotelLocation {
+        font-size: 0.8rem;
+    }
+
+    .viewDetails {
+        font-size: 0.6rem;
+    }
+
+    .hotelInfoRight {
+        font-size: 0.8rem;
+    }
+
+    .hotelInfoRight p {
+        display: flex;
+        align-items: center;
+        margin-left: 2rem;
+    }
+}

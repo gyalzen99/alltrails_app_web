@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/vacation_rental.css">
+    <title>{{title}}</title>
+</head>
+
+<body>
+    {% include "nav_bar.html" %}
+    <div class="vacation">
+        {% for vacation in details %}
+        <div class="vacationContainer">
+            <img src="/media/{{vacation.image}}" alt="" class="vacationImage">
+            <div class="vacationInfo">
+                <div class="info">
+                    <p class="infoTitle">{{vacation.name}}</p>
+                    <p>{{vacation.room_type}}</p>
+                    <p>{{vacation.location}}</p>
+                    <p>{{vacation.number_of_bed_room}}</p>
+                    <p>{{vacation.numberOfBatnumber_of_bath_roomhRoom}}</p>
+                </div>
+                <a href="{% url 'booking' %}?booking={{vacation.name}}" class="showPriceBtn btn">Book
+                    Now</a>
+            </div>
+        </div>
+        {% endfor %}
+        {% include "footer.html" %}
+</body>
+
+</html>

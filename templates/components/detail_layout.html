@@ -1,0 +1,60 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/detail.css">
+    <title>{{detail}}</title>
+</head>
+
+<body>
+    {% include 'nav_bar.html' %}
+    <div class="detailLayoutContainer">
+        <div class="detailLayout">
+            <img src="{{image_path}}" alt="{{page_title}} Image" class="detailImage">
+            <div class="priceInfo">
+                <div class="serviceAmount">
+                    <h2 class="priceTag">
+                        {{details.price_title}}
+                    </h2>
+                    <br>
+                    <div class="h1Text">
+                        <h1 class="currentPrice">
+                            {{details.price}}
+                        </h1>
+                        {% if details.actual_price != None %}
+                        <h1 class="markedPrice">
+                            <s>
+                                {{details.actual_price}}
+                            </s>
+                        </h1>
+                        {% endif %}
+                    </div>
+                    <h2>
+                        {{service_info}}
+                    </h2>
+
+                    <a href="{% url 'booking' %}?booking={{detail_info.detail_info_title}}" class="bookingBtn btn">Book Now</a>
+                </div>
+            </div>
+        </div>
+        <div class="blogContainer">
+            <h2 class="blogTitle">
+                {{detail_info.detail_info_title}}
+            </h2>
+            <p class="blogSentence">
+                {{detail_info.detail_info_sentence}}
+            </p>
+        </div>
+        <div class="itinaryContainer">
+            <h2>{{itinary.itinary_info_title}}</h2>
+            <p>{{itinary.itinary_info}}</p>
+
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</body>
+
+</html>

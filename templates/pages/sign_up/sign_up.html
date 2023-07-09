@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/sign_up.css">
+    <title>Sign Up</title>
+</head>
+
+<body>
+    <header>
+        <a href="{% url 'home' %}">
+            <img src="/static/images/logo.svg" alt="Logo ALLTRAILS" class="logoImage" height="20">
+        </a>
+    </header>
+    <div class="registrationContainer">
+        <div class="registerDiv">
+            <div class="signupTitle">
+                <h2>Register</h2>
+            </div>
+            <form method="POST" class="registrationForm">
+                {% csrf_token %}
+                <input type="text" name="first_name" placeholder="First Name" class="firstNameField inputField"><br>
+                <input type="text" name="last_name" placeholder="Last Name" class="lastNameField inputField"><br>
+                <input type="text" name="username" placeholder="Username" class="usernameField inputField"><br>
+                <input type="email" name="email" placeholder="Email" class="emailField inputField"><br>
+                <input type="password" name="password1" placeholder="Password" class="passwordField inputField"><br>
+                <input type="password" name="password2" placeholder="Conform Password"
+                    class="conformPasswordField inputField"><br>
+                <input type="Submit" placeholder="Submit" class="registerSubmitBtn"><br>
+            </form>
+            <div class="errorMessage">
+                {% for message in messages%}
+                {{message}}
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    <div class="signUpInfo">
+        Already Sign Up
+        <a href="{% url 'sign_in' %}" class="signUpLink">Sign In now</a>
+    </div>
+</body>
+
+</html>

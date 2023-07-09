@@ -1,0 +1,175 @@
+.home {
+    margin: 1rem;
+}
+
+.searchBar {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.searchInputField {
+    width: 50%;
+    min-width: 12rem;
+    height: 1.4rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+    padding-right: 0.2rem;
+    padding-left: 1rem;
+    border-width: 1px;
+    border-radius: 50px;
+    border-color: gray;
+}
+
+.searchInputField:focus {
+    width: 80%;
+    border-color: gray;
+}
+
+.heroContainer {
+    width: 100%;
+}
+
+.heroImage {
+    width: 100%;
+    height: auto;
+}
+
+.listOfPopularDestination {
+    display: flex;
+    overflow-x: auto;
+    text-decoration: none;
+
+}
+
+.listOfPopularDestination::-webkit-scrollbar {
+    width: 0;
+}
+
+.listOfPopularDestination a{
+    text-decoration: none;
+    color: black;
+}
+.listOfDestinationImage {
+    max-width: 18rem;
+    max-height: 10rem;
+
+}
+
+.destination {
+    padding-right: 3rem;
+}
+
+.popularImage {
+    max-width: 28rem;
+    max-height: 10rem;
+}
+
+.kathmanduTourList {
+    display: flex;
+    overflow-x: auto;
+    text-decoration: none;
+}
+
+.kathmanduTourList::-webkit-scrollbar {
+    width: 0;
+}
+
+.kathmanduTourList a{
+    text-decoration: none;
+}
+
+.kathmanduPlace {
+    padding-right: 3rem;
+}
+
+.kathmanduPlace p{
+    color: black;
+}
+
+.listOfKathmanduPlace {
+    max-width: 28rem;
+    max-height: 10rem;
+}
+
+@media (width > 48rem) and (width < 75rem) {
+    .searchInputField {
+        min-width: 10rem;
+        height: 2rem;
+    }
+
+    .listOfPopularDestination {
+        display: flex;
+    }
+
+    .kathmanduTourList {
+        display: flex;
+    }
+
+    .popularImage {
+        max-width: 16.875rem;
+        max-height: 16.25rem;
+    }
+
+    .listOfKathmanduPlace {
+        max-width: 16.875rem;
+        max-height: 16.25rem;
+    }
+}
+
+@media (width > 75rem) {
+
+    .heroContainer{
+        position: relative;
+    }
+
+    .searchBar {
+        width: 100%;
+        position: absolute;
+        top: 44%;
+    }
+
+    .searchInputField {
+        min-width: 10rem;
+        height: 2rem;
+    }
+
+    .searchInputField:focus {
+        min-width: 10rem;
+        max-width: 50%;
+        height: 2rem;
+    }
+
+    .popularDestinations {
+        padding-left: 17.5rem;
+        padding-right: 17.5rem;
+    }
+
+    .listOfPopularDestination {
+        display: flex;
+        justify-content: space-between;
+
+    }
+
+    .popularImage {
+        max-width: 16.875rem;
+        min-width: 10rem;
+        max-height: 16.25rem;
+    }
+
+    .kathmanduTour{
+        padding-left: 17.5rem;
+        padding-right: 17.5rem;
+    }
+
+    .kathmanduTourList {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .listOfKathmanduPlace {
+        max-width: 16.875rem;
+        max-height: 16.25rem;
+    }
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/hotel_detail.css">
+    <title>{{hotel_name}}</title>
+</head>
+
+<body>
+    {% include "nav_bar.html" %}
+    <div class="genericContainer">
+        <div class="genericInfo">
+            <img src="/media/{{hotel_image}}" alt="{{hotel_name}} Image">
+            <p>{{hotel_name}}</p>
+            <p>{{hotel_location}}</p>
+        </div>
+        <br>
+        <div class="hotelInfo">
+            <p>{{hotel_info}}</p>
+        </div>
+        <br>
+        <a href="{% url 'booking' %}?booking={{hotel_name}}" class="btn">Book Now</a>
+    </div>
+    {% include "footer.html" %}
+</body>
+
+</html>

@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/home.css">
+    <title>Home</title>
+</head>
+
+<body>
+    {% include "nav_bar.html" %}
+    <div class="home">
+        <div class="heroContainer">
+            <img src="{{hero_image_path}}" alt="" class="heroImage">
+        </div>
+        <div class="popularDestinations">
+            <h4 class="popularTitle">
+                Popular Destinations of Nepal
+            </h4>
+            <div class="listOfPopularDestination">
+                {% for destination in popular_destination_object %}
+                <a href="{% url 'detail_layout' %}?popular_destination_data_id={{destination.id}}">
+                    <div class="destination">
+                        <img src="/media/{{destination.image_path}}" alt="{{destination.destinationTitle}}"
+                            class="popularImage hillImage">
+                        <p class="imageInfo">
+                            {{destination.title}}
+                        </p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="kathmanduTour">
+            <h4 class="kathmanduTitle">
+                Ways to Tour Kathmandu
+            </h4>
+            <div class="kathmanduTourList">
+                {% for place in kathmandu_tour_object %}
+                <a href="{% url 'detail_layout' %}?kathmandu_tour_data_id={{place.id}}">
+                    <div class="kathmanduPlace">
+                        <img src="/media/{{place.image_path}}" alt="Nepali Food Tasting Tour" class="place foodImage">
+                        <p class="imageInfo">
+                            {{place.title}}
+                        </p>
+                    </div>
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </body>
+    {% include "footer.html" %}
+
+</html>

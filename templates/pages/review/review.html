@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/review.css">
+    <title>{{title}}</title>
+</head>
+
+<body>
+    {% include "nav_bar.html" %}
+    <div class="aboutUs">
+        <img src="/media/{{image}}" alt="" class="aboutUsImage">
+        <div class="websiteInfo">
+        <p>
+        AllTrails Team is built with a perfect combination of Trip experts and management experts to ensure a smooth flow of services for our client satisfaction. Our team members are highly experienced and dedicated to fulfill your holiday needs so that when you return home you will have a beautiful story to share with your near and dear ones. We look forward to welcoming you to our beautiful country.
+        </p>
+        <br>
+        <div class="chairmanInfo">
+            <div class="chairmanInfoImage">
+                <img src="static/images/user.JPG" alt="">
+            </div>
+            <div class="title">
+                <h4>Chairmain</h4>
+                <p>Tshering Sherpa</p>
+            </div> 
+        </div>
+        </div>
+        <h1>User review</h1>
+        {% for review in reviews %}
+        <div class="userInfoContainer">
+            <div class="userInfo">
+                <h2>
+                    {{review.user_name}}
+                </h2>
+                <p>
+                    {{review.webiste_review}}
+                </p>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+    <div class="commentBox">
+        <form method="POST" class="commentForm">
+            {% csrf_token %}
+            <textarea rows='5' type="text" name="comment" placeholder="Write your comment about website"
+                class="inputField"></textarea>
+            <br>
+            <input type="Submit" placeholder="Submit" class="btn"><br>
+        </form>
+    </div>
+    <br>
+    {% include "footer.html" %}
+</body>
+
+</html>

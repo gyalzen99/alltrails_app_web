@@ -1,0 +1,65 @@
+.thingToDo {
+    margin: 1rem;
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.cultureContainer {
+    display: flex;
+    overflow-x: auto;
+}
+
+.cultureContainer::-webkit-scrollbar {
+    width: 0;
+}
+
+.culturalImage {
+    margin-right: 1.8rem;
+}
+
+.foodContainer {
+    display: flex;
+    overflow-x: auto;
+}
+
+.foodContainer::-webkit-scrollbar {
+    width: 0;
+}
+
+.image {
+    margin-right: 1.8rem;
+}
+
+.trek h4 {
+    text-align: center;
+}
+
+.trekContainer {
+    display: flex;
+    overflow-x: auto;
+}
+
+.trekContainer::-webkit-scrollbar {
+    width: 0;
+}
+
+.trekImage {
+    margin-right: 1.8rem;
+}
+
+@media (width > 48rem) and (width < 75rem) {}
+
+@media (width >=75rem) {
+    .thingToDo {
+        margin-left: 22rem;
+        margin-right: 22rem;
+    }
+
+    .image {
+        margin: auto;
+    }
+
+    .trekImage {
+        margin: auto;
+    }
+}

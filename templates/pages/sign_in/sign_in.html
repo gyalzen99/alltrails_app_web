@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/sign_in.css">
+    <title>Sign In</title>
+</head>
+
+<body>
+    {% load socialaccount %}
+    <header>
+        <a href="{% url 'home' %}">
+            <img src="/static/images/logo.svg" alt="Logo ALLTRAILS" class="logoImage" height="20">
+        </a>
+    </header>
+    <div class="signinContainer">
+        <div class="signinDiv">
+            <div class="signinTitle">
+                <h2>Sign In</h2>
+            </div>
+            <form method="POST" class="signinForm">
+                {% csrf_token %}
+                <input type="text" name="signInUsername" placeholder="Username" class="usernameField inputField"><br>
+                <input type="password" name="signInPassword" placeholder="Password"
+                    class="passwordField inputField"><br>
+                <input type="Submit" placeholder="Submit" class="signinFormBtn"><br>
+            </form>
+            <div class="errorpointerMessage">
+                {% for message in messages%}
+                {{message}}
+                {% endfor %}
+            </div>
+            <div class="googleOauthButton">
+                <p>Sign In with</p>
+                <a href="{% provider_login_url 'google' %}?next=/" class="googleSignInBtn">Google Sign In</a>
+            </div>
+        </div>
+    </div>
+    <div class="signUpInfo">
+        No account yet
+        <a href="{% url 'sign_up' %}" class="signUpLink">Sign Up now</a>
+    </div>
+</body>
+
+</html>

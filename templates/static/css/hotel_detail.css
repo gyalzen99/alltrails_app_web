@@ -1,0 +1,31 @@
+.genericContainer{
+   padding-left: 20em;
+   padding-right: 20em;
+   padding-top: 6em;
+   padding-bottom: 6em;
+}
+
+.genericInfo{
+    width: 40%;
+}
+
+.genericContainer img{
+    width: 100%;
+}
+
+.btn {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    color: white;
+    margin-top: 1rem;
+    background-color: #22577A;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.2rem;
+    text-decoration: none;
+
+}
+

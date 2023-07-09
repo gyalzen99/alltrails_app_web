@@ -1,0 +1,174 @@
+.detailLayoutContainer {
+    padding: 1rem;
+    background-color: #D8DFE9;
+    margin-bottom: 1rem;
+}
+
+.detailLayout {
+    width: 100%;
+    text-align: start;
+}
+
+.detailImage {
+    width: 100%;
+}
+
+.priceInfo {
+    color: white;
+    background-color: #22577A;
+    padding: 2rem;
+    margin-top: -2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.serviceAmount {
+    width: 50%;
+}
+
+.priceTag {
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.h1Text {
+    display: flex;
+}
+
+.currentPrice {
+    color: #B4D330;
+    padding-right: 1rem;
+}
+
+.markedPrice {
+    color: #BDBDBD;
+}
+
+.markedPrice s {
+    color: gray;
+}
+
+.priceInfo h1 {
+    font-size: 1rem;
+}
+
+.priceInfo h1 {
+    font-size: 1rem;
+}
+
+.priceInfo h2 {
+    font-size: 1rem;
+}
+
+.priceInfo h2 {
+    font-size: 1rem;
+}
+
+.blogContainer {
+    background-color: #22577A;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.blogTitle {
+    color: #B4D330;
+}
+
+.blogSentence {
+    white-space: pre-line;
+    text-align: justify;
+    color: white;
+}
+
+.itinaryContainer {
+    color: white;
+    background-color: #22577A;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+.itinaryContainer h2 {
+    color: #B4D330;
+}
+
+.itinaryContainer p {
+    white-space: pre-line;
+}
+
+.btn {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    background-color: white;
+    margin-top: 1rem;
+    color: #22577A;
+    border-color: white;
+    border-radius: 16px;
+    text-decoration: none;
+}
+
+@media (width > 48rem) and (width < 75rem) {
+    .detailLayoutContainer {
+        padding: 0px;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    .detailLayout {
+        display: flex;
+    }
+
+    .detailImage {
+        width: 50%;
+        margin: 0.5rem;
+    }
+
+    .priceInfo {
+        width: 50%;
+        align-items: center;
+        margin: 0.5rem;
+    }
+
+    .serviceAmount {
+        width: 60%;
+    }
+
+    .priceInfo h1 {
+        font-size: 1.2rem;
+    }
+
+    .priceInfo h2 {
+        font-size: 1.2rem;
+    }
+
+
+}
+
+@media (width > 75rem) {
+    .detailLayoutContainer {
+        padding: 0px;
+        padding-left: 17.5rem;
+        padding-right: 17.5rem;
+    }
+
+    .detailLayout {
+        display: flex;
+    }
+
+    .detailImage {
+        width: 50%;
+        margin: 0.5rem;
+    }
+
+    .priceInfo {
+        width: 50%;
+        align-items: center;
+        margin: 0.5rem;
+    }
+
+    .serviceAmount {
+        width: 46%;
+    }
+
+}

@@ -1,0 +1,199 @@
+.topNavBar {
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid gray;
+}
+
+.signinUser {
+    height: 20px;
+    margin-top: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navUsername {
+    color: #22577A;
+}
+
+.logoutBtn {
+    margin-right: 1em;
+    text-decoration: none;
+    color: black;
+}
+
+.menuBtn {
+    padding: 0;
+    border: none;
+    background-color: inherit;
+    display: inline-block;
+}
+
+.rightSide {
+    width: 35%;
+    margin: auto;
+    display: none;
+    align-items: center;
+}
+
+.topRightBtn {
+    display: none;
+}
+
+.tripButton {
+    margin-top: 1rem;
+}
+
+.signinButton {
+    margin-top: 1rem;
+}
+
+.signInLink{
+    text-decoration: none;
+    color: white;
+}
+
+.navBar {
+    list-style: none;
+}
+
+.navBar li {
+    margin-top: 1rem;
+}
+
+.navBar a {
+    text-decoration: none;
+    color: black;
+}
+
+@media (width > 48rem) and (width < 75rem) {
+    .topNavBar {
+        align-items: end;
+        padding-top: 0rem;
+    }
+
+    .signinUser {
+        width: 20rem;
+        height: 20px;
+        margin-top: 1rem;
+    }
+
+    .menuBtn {
+        border: none;
+    }
+
+    .menuIcon {
+        display: none;
+    }
+
+    .signinButton {
+        background-color: #B4D330;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+        border-radius: 100px;
+    }
+
+    .closeBtn {
+        display: none;
+    }
+
+    .topRightBtn {
+        width: 10rem;
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .topRightBtn {
+        display: flex;
+    }
+
+    .navBtn {
+        display: none;
+    }
+
+
+    .rightSide {
+        display: inline;
+    }
+
+    .navBar {
+        display: flex;
+        justify-content: space-evenly;
+
+    }
+
+    .bottomNavBar {
+        margin-left: 6rem;
+        margin-right: 6rem;
+    }
+
+}
+
+@media (width > 75rem) {
+    .topNavBar {
+        align-items: end;
+        padding-top: 0rem;
+    }
+
+    .signinUser {
+        width: 500px;
+        height: 20px;
+        margin-top: 1rem;
+    }
+
+    .menuBtn {
+        border: none;
+    }
+
+    .menuIcon {
+        display: none;
+    }
+
+    .signinButton {
+        background-color: #B4D330;
+        padding-top: 0.6rem;
+        padding-bottom: 0.6rem;
+        padding-left: 1.6rem;
+        padding-right: 1.6rem;
+        border-radius: 100px;
+    }
+
+    .closeBtn {
+        display: none;
+    }
+
+    .topRightBtn {
+        width: 10rem;
+        display: block;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .topRightBtn {
+        display: flex;
+    }
+
+    .navBtn {
+        display: none;
+    }
+
+
+    .rightSide {
+        display: inline;
+    }
+
+    .navBar {
+        display: flex;
+        justify-content: space-evenly;
+    }
+
+    .bottomNavBar {
+        margin-left: 16rem;
+        margin-right: 16rem;
+    }
+}

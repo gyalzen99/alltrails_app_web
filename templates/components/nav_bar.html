@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="static/css/nav_bar.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="topNavBar">
+            <a href="{% url 'home' %}">
+                <img src="/static/images/logo.svg" alt="Logo ALLTRAILS" class="logoImage" height="20">
+            </a>
+            <button class="menuBtn" onclick="">
+                <img src="/static/images/menu.svg" alt="Menu Icon" class="menuIcon" height="14">
+            </button>
+            <div class="topRightBtn">
+                {% if user.is_authenticated %}
+                <div class="signinUser">
+                    <h4 class="navUsername">
+                        {{user.username}}
+                    </h4>
+                    <a href="{% url 'logout' %}" class="logoutBtn">
+                        Logo
+                    </a>
+                </div>
+                {% else %}
+                <div class="navPageBtnFirst tripButton">
+                    Trip
+                </div>
+                <a href="{% url 'sign_in' %}" class="signInLink">
+                    <div class="signinButton">
+                        Sign In
+                    </div>
+                </a>
+                {% endif %}
+            </div>
+        </div>
+        <div class="rightSide">
+            <img src="/static/images/close.svg" alt="Close" class="closeBtn">
+            <div class="nav">
+                <div class="navBtn">
+                    {% if user.is_authenticated %}
+                    <div class="signinUser">
+                        <h4 class="navUsername">
+                            {{user.username}}
+                        </h4>
+                        Logout
+                    </div>
+                    {% else %}
+                    <div class="tripButton">
+                        Trip
+                    </div>
+                    <a href="{% url 'sign_in' %}" class="signInLink">
+                        <div class="signinButton">
+                            Sign In
+                        </div>
+                    </a>
+                    {% endif %}
+                </div>
+            </div>
+
+            <div class="bottomNavBar">
+                <Nav class="navBar">
+                    <li>
+                        <a href="{% url 'home' %}">Home</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'hotel' %}">Hotel</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'things_to_do' %}">Things to do</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'vacation_rentals' %}">Vacation Rentals</a>
+                    </li>
+                    <li>
+                        <a href="{% url 'review' %}">About Us</a>
+                    </li>
+                </Nav>
+            </div>
+        </div>
+    </div>
+    <script src="/static/js/nav.js"></script>
+    </div>
+</body>
+
+</html>

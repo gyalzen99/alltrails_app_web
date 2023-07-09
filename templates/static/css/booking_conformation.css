@@ -1,0 +1,41 @@
+body {
+    height: 90vh;
+
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+.bookingDetail{
+    margin-left: 2em;
+}
+
+.conformBookingBtn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.space{
+    margin: 1em;
+}
+
+.btn {
+    padding-left: 2em;
+    padding-right: 2em;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    text-align: center;
+    color: white;
+    margin-top: 1rem;
+    background-color: #22577A;
+    border: none;
+    border-radius: 16px;
+    font-size: 1.2rem;
+}
+
+.link{
+    text-decoration: none;
+}
+

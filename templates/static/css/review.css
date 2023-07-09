@@ -1,0 +1,129 @@
+.aboutUsImage {
+    display: none;
+}
+
+.chairmanInfoImage img{
+    width: 10em;
+    height: 10em;
+    border-radius: 10em;
+}
+
+.userInfoContainer {
+    background-color: #22577A;
+}
+
+.chairmanInfo{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.title{
+    margin-left: 2em;
+}
+.websiteInfo{
+    padding-top: 2em;
+    padding-left: 20em;
+    padding-right: 20em;
+}
+
+.userInfo {
+    padding: 1rem;
+}
+
+.userInfo h2 {
+    color: black;
+}
+
+.userInfo p {
+    color: white;
+}
+
+h1 {
+    color: #22577A;
+    margin: 2em;
+}
+
+@media (width > 48rem) and (width < 75rem) {
+    .aboutUsImage {
+        width: 100%;
+        display: block;
+        margin-top: 1rem;
+    }
+
+
+    .userInfoContainer {
+        display: flex;
+        background-color: white;
+    }
+
+    .userImage {
+        width: 20%;
+        margin-right: 1rem;
+    }
+
+    .userInfo {
+        background-color: #22577A;
+    }
+}
+
+@media (width > 75rem) {
+    .aboutUsImage {
+        width: 100%;
+        display: block;
+        margin-top: 1rem;
+    }
+
+    .userInfoContainer {
+        background-color: white;
+        margin-left: 20rem;
+        margin-right: 20rem;
+    }
+
+    .userInfo{
+        width: 60vw;
+    }
+
+    .userImage {
+        width: 20%;
+        margin-right: 1rem;
+    }
+
+    .userInfo {
+        background-color: #22577A;
+    }
+
+    .commentBox {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .inputField {
+        width: 70vw;
+        margin-top: 1rem;
+        height: 4rem;
+        border-color: grey;
+        border-width: 1px;
+        border-radius: 8px;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 1em;
+        padding-bottom: 1em;
+    }
+
+    .btn {
+        float: right;
+        padding-left: 2em;
+        padding-right: 2em;
+        padding-top: 0.5em;
+        padding-bottom: 0.5em;
+        text-align: center;
+        color: white;
+        margin-top: 1rem;
+        background-color: #22577A;
+        border: none;
+        border-radius: 16px;
+        font-size: 1.2rem;
+    }
+}

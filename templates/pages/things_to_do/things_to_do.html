@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/css/things_to_do.css">
+    <title>{{title}}</title>
+</head>
+
+<body>
+    {% include "nav_bar.html" %}
+    <div class="thingToDo">
+        <div class="culture">
+            <h4 class="cultureTitle">Cultural Tour</h4>
+            <div class="cultureContainer">
+                {% for tour in culture_tours %}
+                {{tour.culture_tour_image}}
+                <a href="{% url 'things_to_do_detail' %}?culture_tour_id={{tour.id}}">
+                    <img src="/media/{{tour.image}}" alt="" class="image culturalImage">
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="food">
+            <h4 class="foodTitle">Food Tasting Tour</h4>
+            <div class="foodContainer">
+                {% for tour in food_tours %}
+                <a href="{% url 'things_to_do_detail' %}?food_tour_id={{tour.id}}">
+                    <img src="/media/{{tour.image}}" alt="" class="image foodImage">
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="trek">
+            <h4 class="trekTitle">Some Pics From Trek</h4>
+            <div class="trekContainer">
+                {% for treak in treaks %}
+                <a href="{% url 'things_to_do_detail' %}?treak_id={{treak.id}}">
+                    <img src="/media/{{treak.image}}" alt="" class="trekImage">
+                </a>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% include "footer.html" %}
+</body>
+
+</html>
